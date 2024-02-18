@@ -159,8 +159,11 @@
      </div>
     </section>
    
+
+    
     <!-- section bus info -->
     <section class="bg-[#F7F8F8] border-4 border-t-[#1DD100] rounded-t-3xl">
+      
       <!-- info -->
       <div class="mt-28 text-center">
         <h1 class="font-bold text-4xl text-black">P.H Paribahan</h1>
@@ -169,7 +172,7 @@
 
       <!-- ticket -->
       <div class="bg-white container mx-auto grid grid-cols-4">
-        <div class="col-span-3 ">
+        <div class="col-span-3 mb-10">
           
             <div class="flex justify-between my-10 ml-8">
               <div class="flex gap-3">
@@ -180,11 +183,11 @@
                 </div>
               </div>
               <div class="">
-                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/bus-icon.png">40 Seats left </a>
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/seat-green.png">40 Seats left </a>
               </div>
             </div>
 
-            <div class="bg-[#e0e8e8] p-8 rounded-xl">
+            <div class="bg-[#f2f5f5] p-8 rounded-xl ml-4">
               <div class="border-dotted border-2 border-b-black pb-5 flex justify-between">
                 <h4 class="font-semibold">Route</h4>
                 <h4 class="font-semibold">Dhaka - Sylhet</h4>
@@ -193,15 +196,185 @@
                 <h4 class="font-semibold">Departure Time</h4>
                 <h4 class="font-semibold">9:00 PM</h4>
               </div>
+
+              <div class=" mt-8 flex justify-between">
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/bus-icon.png">Boarding Point - Laxmipur </a>
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/bus-icon.png">Dropping Point - Bogura</a>
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/bus-icon.png">Est. Time - 11 Hour</a>
+              </div>
              </div>
         </div>
-        <div>
-
+        <div class="flex">
+          <img src="images/info-devider.png" alt="">
+          <div class="flex flex-col justify-center items-center">
+            <img class="w-[40%] mb-5" src="images/fare.png" alt="">
+            <h1 class="font-bold text-4xl">550 Taka</h1>
+            <p class="font-medium text-xl">Per Seat</p>
+          </div>
         </div>
       </div>
-
-
     </section>
+
+
+
+     <!-- section seat -->
+     <section class="bg-[#F7F8F8] pt-14 rounded-2xl">
+
+      <div class="bg-white container p-7  mx-auto grid grid-cols-5">
+        <div class="col-span-3 mb-20">
+
+          <!-- select your seat -->
+          <div>
+            <h1 class="pt-8 text-xl font-bold mb-10 border-dotted border-2 border-b-black pb-5">Select Your Seat</h1>
+        <div class="pb-5 flex justify-between border-dotted border-2 border-b-black">
+          <div class="flex gap-2 ">
+            <img src="images/seat-gray.png" alt="">
+            <h4 class="font-semibold">Available</h4>
+          </div>
+
+          <div class="flex gap-2">
+            <img src="images/seat-green-filled.png" alt="">
+            <h4 class="font-semibold">Selected</h4>
+          </div>
+          
+        </div>
+          </div>
+         
+          <!-- driver seat -->
+           <div class="flex justify-end mt-10">
+            <button class="btn btn-active px-8"><img src="images/tabler-icon-steering-wheel.svg" alt=""></button>
+           </div>
+
+          <!-- all seat -->
+          <div>
+             <!-- all other seat -->
+          <div class="flex justify-between mt-10">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">A</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">A1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">A2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">A3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">A4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">B</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">B1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">B2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">B3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">B4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">C</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">C1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">C2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">C3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">C4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">D</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">D1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">D2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">D3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">D4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">E</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">E1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">E2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">E3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">E4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">F</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">F1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">F2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">F3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">F4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">G</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">G1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">G2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">G3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">G4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">H</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">H1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">H2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">H3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">H4</kbd>
+             </div>
+           </div>
+ 
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">I</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">I1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">I2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">I3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">I4</kbd>
+             </div>
+           </div>
+           
+           <div class="flex justify-between mt-5">
+            <div class="flex items-center gap-14">
+             <h1 class="text-2xl ml-8 font-bold">J</h1>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J1</kbd>
+             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J2</kbd>
+            </div>
+             <div class="flex gap-14">
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J3</kbd>
+               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J4</kbd>
+             </div>
+           </div>
+          </div>
+          
+           
+        </div>
+      </div>
+  </section>
+
+
   </main>
   <footer></footer>
 
