@@ -38,9 +38,9 @@
 </script> 
 </head>
 <body>
-  <header class="container mx-auto">
+  <header class="mb-[590px]">
    <!-- Nav section -->
-   <section class="mb-8">
+   <section class="mb-8 container mx-auto">
     <nav>
       <div class="navbar bg-base-100">
         <div class="navbar-start">
@@ -75,19 +75,21 @@
 <!-- banner section -->
    <section class="mb-8">
 
-    <div class="hero min-h-screen absolute mb-8" style="background-image: url(images/banner.png);">
-      <div class="hero-content text-center text-neutral-content">
-        <div class="max-w-xl">
-          <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
-          <h1 class="mb-5 text-5xl font-bold color-primary">P Paribahan</h1>
-          <p class="mb-5">"P Paribahan" appears to be a bus service in Bangladesh. Paribahan means "transport" in Bengali. It's common for bus services indicating their focus on providing transport services.</p>
-          <button class="btn bg-primary border-none font-bold text-xl">Buy Tickets</button>
+    <div class="">
+      <div class="hero min-h-screen mb-8 absolute" style="background-image: url(images/banner.png);">
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-xl">
+            <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
+            <h1 class="mb-5 text-5xl font-bold color-primary">P Paribahan</h1>
+            <p class="mb-5">"P Paribahan" appears to be a bus service in Bangladesh. Paribahan means "transport" in Bengali. It's common for bus services indicating their focus on providing transport services.</p>
+            <button class="btn bg-primary border-none font-bold text-xl">Buy Tickets</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- banner card section -->
-    <div class="flex gap-5 justify-center relative top-[525px] ">
+    <div class="flex gap-5 justify-center relative translate-y-[525px]">
 
       <div class="card card-side px-4 bg-white shadow-xl border-b-4 border-[#1DD100]">
         <figure><img src="images/people.png" alt="Movie"/></figure>
@@ -117,7 +119,90 @@
    
   </header>
 
-  <main></main>
+  <main>
+    <!-- section cupon offer -->
+    <section class="mb-28">
+     <div class="container mx-auto flex gap-10 justify-between mb-20">
+
+      <div class="card card-side px-8 rounded-xl bg-[#FFBF0F] w-[50%] flex justify-between items-center">
+        
+        <div class="card-body">
+          <h2 class="card-title font-extrabold text-4xl">15% OFF</h2>
+          <h3 class="font-bold">on your next purchase</h3>
+          <p>use by January 2024</p>
+        </div>
+         <img src="images/cupon-devider.png" alt="">
+         
+        <div class="card-body">
+          <h2 class="card-title font-extrabold text-4xl">NEW15</h2>
+          <p>Coupon Code</p>
+        </div>
+      </div>
+      <div class="card card-side px-8 rounded-xl bg-[#F78C9C] w-[50%] flex justify-between items-center">
+        
+        <div class="card-body">
+          <h2 class="card-title font-extrabold text-4xl">20% OFF</h2>
+          <h3 class="font-bold">on your next purchase</h3>
+          <p>use by January 2024</p>
+        </div>
+         <img src="images/cupon-devider.png" alt="">
+         
+        <div class="card-body">
+          <h2 class="card-title font-extrabold text-4xl">Couple 20</h2>
+          <p>Coupon Code</p>
+        </div>
+      </div>
+
+     </div>
+     <div class="text-center">
+      <button class="btn btn-outline btn-success color-primary text-xl">See All Offers</button>
+     </div>
+    </section>
+   
+    <!-- section bus info -->
+    <section class="bg-[#F7F8F8] border-4 border-t-[#1DD100] rounded-t-3xl">
+      <!-- info -->
+      <div class="mt-28 text-center">
+        <h1 class="font-bold text-4xl text-black">P.H Paribahan</h1>
+        <p class="max-w-[550px] mx-auto mt-5 mb-12">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+      </div>
+
+      <!-- ticket -->
+      <div class="bg-white container mx-auto grid grid-cols-4">
+        <div class="col-span-3 ">
+          
+            <div class="flex justify-between my-10 ml-8">
+              <div class="flex gap-3">
+                <img src="images/bus-logo.png" alt="" srcset="">
+                <div>
+                <h1 class="text-3xl font-bold">Greenline Paribahan</h1>
+                <p>Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div class="">
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/bus-icon.png">40 Seats left </a>
+              </div>
+            </div>
+
+            <div class="bg-[#e0e8e8] p-8 rounded-xl">
+              <div class="border-dotted border-2 border-b-black pb-5 flex justify-between">
+                <h4 class="font-semibold">Route</h4>
+                <h4 class="font-semibold">Dhaka - Sylhet</h4>
+              </div>
+              <div class="border-dotted border-2 border-b-black pb-5 flex justify-between">
+                <h4 class="font-semibold">Departure Time</h4>
+                <h4 class="font-semibold">9:00 PM</h4>
+              </div>
+             </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+
+
+    </section>
+  </main>
   <footer></footer>
 
 
