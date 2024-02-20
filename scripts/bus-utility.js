@@ -111,41 +111,42 @@ const UpdateSeatFunc = () => {
     parentDiv.appendChild(div);
   });
 };
+
 // append seat and price
 function appendSeat(e) {
   //  update total price:
   increaseTotalPrice(550, "totalPriceDisplay");
   increaseTotalPrice(550, "grandTotalPrice");
 
-  // Create div element
-  const creatDiv = document.createElement("div");
+  // // Create div element
+  // const creatDiv = document.createElement("div");
 
-  // Create h1 element for seat information
-  const h1 = document.createElement("h1");
-  const h1Text = document.createTextNode(e);
-  h1.appendChild(h1Text);
-  creatDiv.appendChild(h1);
+  // // Create h1 element for seat information
+  // const h1 = document.createElement("h1");
+  // const h1Text = document.createTextNode(e);
+  // h1.appendChild(h1Text);
+  // creatDiv.appendChild(h1);
 
-  // Create p element for seat type
-  const p = document.createElement("p");
-  const economyText = document.createTextNode("economy");
-  p.appendChild(economyText);
-  creatDiv.appendChild(p);
+  // // Create p element for seat type
+  // const p = document.createElement("p");
+  // const economyText = document.createTextNode("economy");
+  // p.appendChild(economyText);
+  // creatDiv.appendChild(p);
 
-  // Create h1 element for seat price
-  const price = document.createElement("h1");
-  const priceText = document.createTextNode(550);
-  price.appendChild(priceText);
-  creatDiv.appendChild(price);
+  // // Create h1 element for seat price
+  // const price = document.createElement("h1");
+  // const priceText = document.createTextNode(550);
+  // price.appendChild(priceText);
+  // creatDiv.appendChild(price);
 
-  // const getPrice = 9
+  // // const getPrice = 9
 
-  // Append the created div to the element with id 'append-div'
-  const appendDiv = document.getElementById("append-div");
-  appendDiv.appendChild(creatDiv);
+  // // Append the created div to the element with id 'append-div'
+  // const appendDiv = document.getElementById("append-div");
+  // appendDiv.appendChild(creatDiv);
 
-  // adding css property
-  creatDiv.className = "flex justify-between p-2";
+  // // adding css property
+  // creatDiv.className = "flex justify-between p-2";
 }
 
 const UpdaetGrandTotal = () => {
