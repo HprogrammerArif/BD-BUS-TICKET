@@ -37,7 +37,7 @@
   }
 </script> 
 </head>
-<body>
+<body id="body">
   <header class="mb-[590px]">
    <!-- Nav section -->
    <section class="mb-8 container mx-auto">
@@ -183,7 +183,7 @@
                 </div>
               </div>
               <div class="">
-                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/seat-green.png">40 Seats left </a>
+                <a class="btn  bg-[#1DD1001A] border border-[#1DD10066] text-xl   text-[#1DD100]"><img src="images/seat-green.png"><span id="total-seat-count">24</span> Seats left </a>
               </div>
             </div>
 
@@ -252,12 +252,12 @@
           <div class="flex justify-between mt-10">
             <div class="flex items-center gap-14">
              <h1 class="text-2xl ml-8 font-bold">A</h1>
-             <kbd class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A1</kbd>
-             <kbd class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A2</kbd>
+             <kbd onclick="setBackgroundColorById('A1')" id="A1" class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A1</kbd>
+             <kbd onclick="setBackgroundColorById('A2')" id="A2" class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A2</kbd>
             </div>
              <div class="flex gap-14">
-               <kbd class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A3</kbd>
-               <kbd class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A4</kbd>
+               <kbd onclick="setBackgroundColorById('A3')" id="A3" class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A3</kbd>
+               <kbd onclick="setBackgroundColorById('A4')" id="A4" class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">A4</kbd>
              </div>
            </div>
  
@@ -320,17 +320,7 @@
                <kbd class="kbd kbd-lg px-10 py-2 text-2xl cursor-pointer">F4</kbd>
              </div>
            </div>           
-           <div class="flex justify-between mt-5">
-            <div class="flex items-center gap-14">
-             <h1 class="text-2xl ml-8 font-bold">J</h1>
-             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J1</kbd>
-             <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J2</kbd>
-            </div>
-             <div class="flex gap-14">
-               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J3</kbd>
-               <kbd class="kbd kbd-lg px-10 py-2 text-2xl">J4</kbd>
-             </div>
-           </div>
+          
           </div>
           
            
@@ -340,12 +330,13 @@
 
           <h1 class="pt-8 text-xl font-bold mb-10 border-dotted border-2 border-b-black pb-5">Select Your Seat</h1>
 
-          <div class="bg-[#F7F8F8] p-8">
+          <div id="append-div" class="bg-[#F7F8F8] p-8">
+
             <div class="pb-5 flex justify-between items-center border-dotted border-2 border-b-black">
 
               <div class="flex gap-2 items-center">
                 <h4 class="font-semibold">Seat</h4>
-                <button class="btn bg-primary text-white">0</button>
+                <button id="passenger-seat-count" class="btn bg-primary text-white ">0</button>
               </div>
     
               <div class="">
@@ -466,5 +457,6 @@
 
 
   <script src="scripts/script.js"></script>
+  <script src="scripts/bus-utility.js"></script>
 </body>
 </html>
