@@ -6,45 +6,59 @@ let Coupons = { NEW15: 15, Couple20: 20 };
 // let togle = true;
 
 // //add background color by id
-// function setBackgroundColorById(elementId) {
-//   console.log(togle);
-//   if (togle) {
-//     const element = document.getElementById(elementId);
-//     element.classList.add("bg-green-700");
-//     //  decrease total seat count
-//     const currentTotalSeat = getTotalSeatById("total-seat-count");
-//     const updatedSeat = currentTotalSeat - 1;
-//     console.log(updatedSeat);
-//     setTextElementValueById("total-seat-count", updatedSeat);
+// // function setBackgroundColorById(elementId) {
+// //   console.log(togle);
+// //   if (togle) {
+// //     const element = document.getElementById(elementId);
+// //     element.classList.add("bg-green-700");
 
-//     //  increase passenger total seat count
-//     const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
-//     const passengerUpdatedSeat = passengerCurrentTotalSeat + 1;
-//     //console.log(passengerUpdatedSeat);
-//     setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
-//     appendSeat(elementId);
-//   } else {
-//     const element = document.getElementById(elementId);
-//     element.classList.remove("bg-green-700");
-//     //  decrease total seat count
-//     const currentTotalSeat = getTotalSeatById("total-seat-count");
-//     const updatedSeat = currentTotalSeat + 1;
-//     setTextElementValueById("total-seat-count", updatedSeat);
+// //     // //  decrease total seat count
+// //     // const currentTotalSeat = getTotalSeatById("total-seat-count");
+// //     // const updatedSeat = currentTotalSeat - 1;
+// //     // console.log(updatedSeat);
+// //     // setTextElementValueById("total-seat-count", updatedSeat);
 
-//     //  increase passenger total seat count
-//     const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
-//     const passengerUpdatedSeat = passengerCurrentTotalSeat - 1;
-//     //console.log(passengerUpdatedSeat);
-//     setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
-//     appendSeat(elementId);
-//   }
-//   togle = !togle;
-// }
+// //     // //  increase passenger total seat count
+// //     // const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
+// //     // const passengerUpdatedSeat = passengerCurrentTotalSeat + 1;
+// //     // //console.log(passengerUpdatedSeat);
+// //     // setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
+// //     appendSeat(elementId);
+// //   } else {
+// //     const element = document.getElementById(elementId);
+// //     element.classList.remove("bg-green-700");
 
+// //     // //  decrease total seat count
+// //     // const currentTotalSeat = getTotalSeatById("total-seat-count");
+// //     // const updatedSeat = currentTotalSeat + 1;
+// //     // setTextElementValueById("total-seat-count", updatedSeat);
+
+// //     // //  increase passenger total seat count
+// //     // const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
+// //     // const passengerUpdatedSeat = passengerCurrentTotalSeat - 1;
+// //     // //console.log(passengerUpdatedSeat);
+// //     // setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
+// //     appendSeat(elementId);
+// //   }
+// //   togle = !togle;
+// // }
+
+
+
+// INCREASE TOTAL PRICE
 const increaseTotalPrice = (newPrice, id) => {
   const label = document.getElementById(id);
   label.innerText = parseFloat(label.innerText) + newPrice;
 };
+
+
+// DECREASE TOTAL PRICE
+const decreaseTotalPrice = (newPrice, id) => {
+  const label = document.getElementById(id);
+  label.innerText = parseFloat(label.innerText) - newPrice;
+};
+
+
 
 // make a array of object to store selected seat details
 let selectedSeats = [];
@@ -61,8 +75,8 @@ const seatBooking = (id) => {
 
 //  seatNum -> id of the btn
 const SelectSeat = (seatNum) => {
-  // condition to check the length of the array.  
-  if (selectedSeats.length+1 <= 4) {
+  // condition to check the length of the array.
+  if (selectedSeats.length + 1 <= 4) {
     const btn = document.getElementById(seatNum);
     btn.classList.add("bg-green-700");
 
@@ -74,14 +88,42 @@ const SelectSeat = (seatNum) => {
     });
   }
 
+  //  decrease total seat count
+  const currentTotalSeat = getTotalSeatById("total-seat-count");
+  const updatedSeat = currentTotalSeat - 1;
+  console.log(updatedSeat);
+  setTextElementValueById("total-seat-count", updatedSeat);
+
+  //  increase passenger total seat count
+  const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
+  const passengerUpdatedSeat = passengerCurrentTotalSeat + 1;
+  setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
+
+  increaseTotalPrice(550, "totalPriceDisplay");
+  increaseTotalPrice(550, "grandTotalPrice");
+
   //  update func will refreash the selected seat display accordint to the list
   UpdateSeatFunc();
 };
+
 const DeSelectSeat = (seatNum) => {
   const btn = document.getElementById(seatNum);
   btn.classList.remove("bg-green-700");
   //  removing clicked btn from the array. by taking which seatNum is not match with the list.
   selectedSeats = selectedSeats.filter((i) => i.seatNum !== seatNum);
+
+  //  decrease total seat count
+  const currentTotalSeat = getTotalSeatById("total-seat-count");
+  const updatedSeat = currentTotalSeat + 1;
+  setTextElementValueById("total-seat-count", updatedSeat);
+
+  //  increase passenger total seat count
+  const passengerCurrentTotalSeat = getTotalSeatById("passenger-seat-count");
+  const passengerUpdatedSeat = passengerCurrentTotalSeat - 1;
+  setTextElementValueById("passenger-seat-count", passengerUpdatedSeat);
+
+  decreaseTotalPrice(550, "totalPriceDisplay");
+  decreaseTotalPrice(550, "grandTotalPrice");
 
   //  update func will refreash the selected seat display accordint to the list
   UpdateSeatFunc();
