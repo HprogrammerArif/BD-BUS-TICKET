@@ -1,6 +1,6 @@
 //  importat values
 
-let Coupons = { NEW15: 15, Couple20: 20 };
+let Coupons = { NEW15: 15, ["Couple 20"]: 20 };
 
 // //  select deSeledct togle:
 // let togle = true;
